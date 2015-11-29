@@ -1,0 +1,39 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="CofeeDao" class="com.remoteTiger.CoffeeSpringDao">
+		<property name="datasource" ref="dataSource" />
+		<property name="model" ref="addCofee"></property>
+		
+	</bean>
+
+
+
+<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/coffeeshop" />
+		<property name="username" value="root" />
+		<property name="password" value="" />
+	</bean>
+	
+		<bean id="addCofee" class="CoffeeModel.Model">
+		<property name="name" value="Yasin"></property>
+		<property name="country" value="Azerbaijan"></property>
+		<property name="quantity" value="85"></property>
+		<property name="PRODUCT_NO" value="324"></property>
+		
+		
+		
+		
+		
+		</bean>
+	
+	
+	
+	
+	
+</beans>
